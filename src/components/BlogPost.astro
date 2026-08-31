@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import Layout from '../components/layout.astro';
+import BlogPostComp from '../components/BlogPost.jsx'
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage, info } = Astro.props;
+---
+
+<BlogPostComp title={title} info={info} />
+
+
+	
+					
+					
+	
+				
+
+

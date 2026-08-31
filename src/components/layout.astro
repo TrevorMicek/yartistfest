@@ -1,0 +1,42 @@
+---
+
+import "../globals.css";
+
+import Navbar from './navbar.jsx'
+import Header from "./Header.jsx"
+import Footer from "./Footer";
+const { title, isBlog } = Astro.props;
+
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+         <script  type="text/partytown" is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-LHW4HG3VK0"></script>
+<script id="gtag"  type="text/partytown" is:inline>
+  
+ window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LHW4HG3VK0');
+  
+</script>
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/47413956.js"></script>
+<script src="https://js.hsforms.net/forms/embed/47413956.js" defer></script>
+</head>
+<body>
+    {isBlog ? <Navbar client:load /> : <Header title={title} client:load />}
+    <slot />
+    <Footer />
+    <!-- Start of HubSpot Embed Code -->
+
+<!-- End of HubSpot Embed Code -->
+</body>
+</html>

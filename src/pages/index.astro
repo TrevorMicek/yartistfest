@@ -1,0 +1,33 @@
+---
+import React, {  Fragment } from "react"
+import ChatwootWidget from '../components/Chatwoot.jsx'
+  
+import Layout from "../components/Layout/layout.astro"
+import FeatureSection from '../components/Home/FeatureSection.jsx'
+import CTA from '../components/Home/HomeCTA.jsx'
+import Portfolio from '../components/Home/Portfolio.jsx'
+import Services from '../components/Home/Services.jsx'
+import Stats from '../components/Home/Stats.jsx'
+
+
+---
+       
+
+    <Layout title="Small Business Web Design">
+        
+        <FeatureSection client:load />
+        <Portfolio />
+        <Stats />
+        <Services client:load />
+        <CTA client:load />
+        
+        </Layout>
+
+  
+
+
+
+  
+  
+
+
