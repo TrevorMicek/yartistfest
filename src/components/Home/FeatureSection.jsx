@@ -94,52 +94,28 @@ export default function FeatureSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-9 lg:px-8 .5xl:w-[800px]">
         <div className="">
-          <h2 className="mt-4 text-base text-default font-mont font-semibold tracking-wide uppercase .5xl:text-lg">
-            Move Beyond WordPress
-          </h2>
+          <div class=" mt-10 relative mb-10 mx-auto items-center space-y-8 sm:mx-1 md:space-x-16 lg:inset-y-0 lg:right-0 lg:h-full">
+            <a href="src\images\yartistfestflier.jpg" class="w-fit">
+              <img
+                class="relative w-[300px] mr-0 object-fit  sm:w-[400px]"
+                src="src\images\yartistfestflier.jpg"
+                alt={` website on desktop and mobile`}
+                width="250px"
+                height="175px"
+                loading="lazy"
+              />
+            </a>
+          </div>
           <p className="mt-2 relative z-10 max-w-3xl text-3xl font-mont font-[425] tracking-tight text-gray-900 .5xl:text-4xl">
-            A New Way of Making Websites
+            Where Local Art Meets Live Sounds.
           </p>
           <p
             className={`mt-4 relative z-10 max-w-2xl text-xl text-gray-600 .5xl:text-1.5xl`}
           >
-            We are changing how small business web design and development is
-            being done with our hand coded & mobile friendly websites.{" "}
-            <b>You own the code</b> we offer as an affordable package that
-            includes all your website needs for businesses like you.
+            Thank you for joining us at the 2nd Annual Yartistfest! Together, we
+            celebrated local creativity and raised vital funds to support Denver
+            Public Schools music and arts education.
           </p>
-        </div>
-
-        <div className="  mt-16">
-          <h2 className="mt-5 mb-6 text-base text-default font-mont font-semibold tracking-wide uppercase .5xl:text-lg">
-            Benefits
-          </h2>
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            {benefits.map((benefit) => (
-              <div key={benefit.name} className="relative">
-                <FadeIn>
-                  <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-default text-white ">
-                      <benefit.icon
-                        className="h-6 w-6 .5xl:h-7 .5xl:w-7"
-                        aria-hidden="true"
-                      />
-                    </div>
-
-                    <p className="ml-16 text-lg leading-6 font-mont font-medium text-gray-900 .5xl:text-xl">
-                      {benefit.name === "Monthly Cost" ? (
-                        <span>&#216; </span>
-                      ) : null}
-                      {benefit.name}
-                    </p>
-                  </dt>
-                  <dd className="mt-2 ml-16 text-base text-gray-600 .5xl:text-lg">
-                    {benefit.description}
-                  </dd>
-                </FadeIn>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
     </div>
