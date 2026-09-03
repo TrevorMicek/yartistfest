@@ -2836,7 +2836,7 @@ __metadata:
     react-router: "npm:^7.2.0"
     tailwindcss: "npm:^3.4.17"
     typescript: "npm:^5.7.2"
-    wrangler: "npm:4"
+    wrangler: "npm:^4.128.0"
   languageName: unknown
   linkType: soft
 
@@ -9091,7 +9091,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:4":
+"wrangler@npm:^4.128.0":
   version: 4.128.0
   resolution: "wrangler@npm:4.128.0"
   dependencies:
