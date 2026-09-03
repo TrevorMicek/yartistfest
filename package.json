@@ -2,6 +2,7 @@
   "name": "astro-template",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev",
