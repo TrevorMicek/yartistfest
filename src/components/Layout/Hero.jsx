@@ -11,7 +11,6 @@ const navigation = [
   { name: "Services", href: "/services" },
 
   { name: "Pricing", href: "/pricing" },
-  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -81,11 +80,11 @@ export default function HeroComp() {
                   <div className="h-20 w-auto pt-4 flex items-center justify-between">
                     <a
                       href="/"
-                      className="rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+                      className="rounded-md bg-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600"
                     >
                       <span className="sr-only">Workflow</span>
                       <img
-                        src="https://res.cloudinary.com/websites-by-trevor/image/upload/v1725229743/NocoLogo_g8cj54.png"
+                        src="src\images\Yartistfest.png"
                         alt="artsy noco web designs logo"
                         height="50px"
                         width="250px"
