@@ -34,7 +34,7 @@ export default function HeroComp() {
                       <a href="/" className="">
                         <span className="sr-only">Workflow</span>
                         <img
-                          src="src\images\yartistfest.png"
+                          src="public\images\yartistfest.png"
                           alt="artsy yartisfest logo"
                           height="50px"
                           width="150px"

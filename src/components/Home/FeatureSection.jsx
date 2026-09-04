@@ -5,7 +5,6 @@ import {
   CreditCardIcon,
   BoltIcon,
 } from "@heroicons/react/24/outline";
-import Logo from "../../images/PC.jpg";
 import { FadeIn } from "../FadeIn";
 const benefits = [
   {
@@ -98,7 +97,7 @@ export default function FeatureSection() {
             <a href="src\images\yartistfestflier.jpg" class="w-fit">
               <img
                 class="relative w-[300px] mr-0 object-fit  sm:w-[400px]"
-                src="src\images\yartistfestflier.jpg"
+                src="public\images\yartistfestflier.jpg"
                 alt={` website on desktop and mobile`}
                 width="250px"
                 height="175px"
