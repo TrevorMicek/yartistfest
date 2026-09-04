@@ -98,7 +98,7 @@ export default function FeatureSection() {
             <a href="src\images\yartistfestflier.jpg" class="w-fit">
               <img
                 class="relative w-[300px] mr-0 object-fit  sm:w-[400px]"
-                src="src\images\yartistfestflier.jpg"
+                src="https://res.cloudinary.com/websites-by-trevor/image/upload/v1788545365/yartistfestflier_c69a8j.jpg"
                 alt={` website on desktop and mobile`}
                 width="250px"
                 height="175px"
