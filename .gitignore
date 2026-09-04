@@ -17,6 +17,7 @@ node_modules/
 # production
 /build
 /dist
+.wrangler
 # misc
 .DS_Store
 *.pem
