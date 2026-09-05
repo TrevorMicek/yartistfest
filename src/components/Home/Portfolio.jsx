@@ -1,10 +1,10 @@
 import React from "react";
-
+import band from "./src/images/band.jpg";
 const portfolio = [
   {
     name: "Music",
 
-    desktop: "src/images/band.jpg",
+    desktop: band,
 
     a: "https://earthandelle.netlify.app/",
     alt: "supplement website",
@@ -59,7 +59,7 @@ export default function Example() {
               <a href={example.a}>
                 <img
                   className="relative w-screen h-full"
-                  src={example.desktop}
+                  src={example.desktop.src}
                   alt={example.alt}
                   width="300px"
                   height="200px"
