@@ -1,5 +1,7 @@
 import React from "react";
 import band from "/src/images/band.jpg";
+import bbq from "/src/images/bbq.jpg";
+import community from "/src/images/community.jpg";
 const portfolio = [
   {
     name: "Music",
@@ -12,7 +14,7 @@ const portfolio = [
   {
     name: "Food",
 
-    desktop: "src/images/bbq.jpg",
+    desktop: bbq,
 
     a: "https://spotterfitness.netlify.app/",
     alt: "fitness app website",
@@ -20,7 +22,7 @@ const portfolio = [
   {
     name: "Community",
 
-    desktop: "src/images/community.jpg",
+    desktop: community,
     a: "https://eagle-plumes.com/",
     alt: "native american  website",
   },
