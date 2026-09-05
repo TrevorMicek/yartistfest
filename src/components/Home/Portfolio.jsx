@@ -1,5 +1,5 @@
 import React from "react";
-import band from "./src/images/band.jpg";
+import band from "/src/images/band.jpg";
 const portfolio = [
   {
     name: "Music",
