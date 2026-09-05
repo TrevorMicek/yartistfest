@@ -25,19 +25,19 @@ export default function Example() {
           duration={0.75}
           x={-24}
         >
-          <div className="mt-8 flex justify-evenly lg:mt-0 lg:flex-shrink-0">
-            <div className="inline-flex rounded-md shadow">
+          <div className="mt-8 flex justify-evenly space-x-2 lg:mt-0 lg:flex-shrink-0">
+            <div className="mx-auto">
               <a
                 href="/portfolio"
-                className=" inline-flex items-center justify-center px-10 xs:px-24 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-tl from-[#97278b] to-[#e70103] hover:bg-blue .5xl:text-lg .5xl:px-7"
+                className=" inline-flex items-center justify-center px-5 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-tl from-[#97278b] to-[#e70103] hover:bg-blue .5xl:text-lg .5xl:px-7"
               >
                 RSVP for 2027
               </a>
             </div>
-            <div className="inline-flex rounded-md shadow">
+            <div className="mx-auto">
               <a
                 href="/portfolio"
-                className=" inline-flex items-center justify-center px-10 xs:px-24 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-tr from-[#97278b] to-[#e70103] hover:bg-blue .5xl:text-lg .5xl:px-7"
+                className=" inline-flex items-center justify-center px-5 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-tr from-[#97278b] to-[#e70103] hover:bg-blue .5xl:text-lg .5xl:px-7"
               >
                 Band Signup{" "}
               </a>
