@@ -94,18 +94,6 @@ export default function FeatureSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-9 lg:px-8 .5xl:w-[800px]">
         <div className="">
-          <div class=" mt-10 relative mb-10 mx-auto items-center space-y-8 sm:mx-1 md:space-x-16 lg:inset-y-0 lg:right-0 lg:h-full">
-            <a href="src\images\yartistfestflier.jpg" class="w-fit">
-              <img
-                class="relative w-[300px] mr-0 object-fit  sm:w-[400px]"
-                src="https://res.cloudinary.com/websites-by-trevor/image/upload/v1788545365/yartistfestflier_c69a8j.jpg"
-                alt={` website on desktop and mobile`}
-                width="250px"
-                height="175px"
-                loading="lazy"
-              />
-            </a>
-          </div>
           <p className="mt-2 relative z-10 max-w-3xl text-3xl font-mont font-[425] tracking-tight text-gray-900 .5xl:text-4xl">
             Where Local Art Meets Live Sounds.
           </p>

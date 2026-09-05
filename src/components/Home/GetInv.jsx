@@ -16,7 +16,7 @@ export default function Example() {
           <h2 className="text-3xl font-mont font-medium tracking-tight text-gray-900 md:text-4xl .5xl:text-4xl">
             <span className="block">Ready to get involved?</span>
             <span className="block text-default">
-              See how we bring ideas to life.{" "}
+              Help bring people together.
             </span>
           </h2>
         </FadeIn>
@@ -31,7 +31,7 @@ export default function Example() {
                 href="/portfolio"
                 className=" inline-flex items-center justify-center px-10 xs:px-24 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-default  hover:bg-blue .5xl:text-lg .5xl:px-7"
               >
-                RSVP
+                RSVP for 2027
               </a>
             </div>
             <div className="inline-flex rounded-md shadow">
