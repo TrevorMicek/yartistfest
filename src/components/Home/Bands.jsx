@@ -51,7 +51,7 @@ export default function Example() {
     >
       <div class="mx-auto flex flex-col justify-center px-4 sm:px-9  sm:max-w-2xl .5xl:w-[800px] lg:px-12 lg:max-w-7xl">
         <div>
-          <h2 className="mt-2 mb-4 max-w-3xl mx-auto text-4xl font-mont font-medium tracking-tight text-[#e70103] text-center .5xl:text-4.5xl">
+          <h2 className="mt-2 mb-4 max-w-3xl mx-auto text-4xl font-mont font-medium tracking-tight text-[#97278b] text-center .5xl:text-4.5xl">
             <a href="/portfolio">Meet The Bands</a>
           </h2>
         </div>

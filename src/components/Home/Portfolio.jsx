@@ -5,23 +5,18 @@ import community from "/src/images/community.jpg";
 const portfolio = [
   {
     name: "Music",
-
     desktop: band,
-
     a: "https://earthandelle.netlify.app/",
     alt: "supplement website",
   },
   {
     name: "Food",
-
     desktop: bbq,
-
     a: "https://spotterfitness.netlify.app/",
     alt: "fitness app website",
   },
   {
     name: "Community",
-
     desktop: community,
     a: "https://eagle-plumes.com/",
     alt: "native american  website",

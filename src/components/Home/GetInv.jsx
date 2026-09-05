@@ -15,7 +15,7 @@ export default function Example() {
         <FadeIn x={-24}>
           <h2 className="text-3xl font-mont font-medium tracking-tight text-gray-900 md:text-4xl .5xl:text-4xl">
             <span className="block">Ready to get involved?</span>
-            <span className="block text-default">
+            <span className="block text-[#97278b]">
               Help bring people together.
             </span>
           </h2>
@@ -29,7 +29,7 @@ export default function Example() {
             <div className="inline-flex rounded-md shadow">
               <a
                 href="/portfolio"
-                className=" inline-flex items-center justify-center px-10 xs:px-24 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-default  hover:bg-blue .5xl:text-lg .5xl:px-7"
+                className=" inline-flex items-center justify-center px-10 xs:px-24 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-tl from-[#97278b] to-[#e70103] hover:bg-blue .5xl:text-lg .5xl:px-7"
               >
                 RSVP for 2027
               </a>
@@ -37,7 +37,7 @@ export default function Example() {
             <div className="inline-flex rounded-md shadow">
               <a
                 href="/portfolio"
-                className=" inline-flex items-center justify-center px-10 xs:px-24 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-default  hover:bg-blue .5xl:text-lg .5xl:px-7"
+                className=" inline-flex items-center justify-center px-10 xs:px-24 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-tr from-[#97278b] to-[#e70103] hover:bg-blue .5xl:text-lg .5xl:px-7"
               >
                 Band Signup{" "}
               </a>
