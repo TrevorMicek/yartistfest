@@ -9,7 +9,6 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Bands", href: "/bands" },
-
   { name: "Contact", href: "/contact" },
 ];
 
@@ -118,12 +117,10 @@ export default function HeroComp() {
               <div className=" max-w-md px-2 sm:max-w-2xl sm:px-9  lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div className="">
                   <h1 className="mt-8 tiny:text-[1.9rem] xs:text-4xl text-3.5xl font-mont font-[425]  text-white sm:mt-5 sm:text-5xl .5xl:text-5.5xl .5xl:py-1 lg:mt-6 xl:text-6xl">
-                    Welcome to YartistFest
+                    Welcome To Yartistfest
                   </h1>
                   <p className="mt-3 text-gray-300 sm:mt-5 sm:text-xl .5xl:pt-4 .5xl:-mb-4 .5xl:text-1.5xl xl:text-xl min-w-full ">
-                    Great Music. Amazing Food. A Brighter Future for Denver
-                    Students. YartistFest brings together local sound, culinary
-                    talent, and community spirit for a cause that hits home.
+                    Music, Art, and Community. Built by Denver, for Denver.
                   </p>
                   <FadeIn>
                     <div className="mt-10 sm:mt-12">

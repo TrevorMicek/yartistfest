@@ -6,7 +6,7 @@ import {
   BoltIcon,
 } from "@heroicons/react/24/outline";
 
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../FadeIn";
 const benefits = [
   {
     name: "	You constantly fight with your partner.",

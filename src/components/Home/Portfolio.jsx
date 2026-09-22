@@ -26,7 +26,7 @@ export default function Example() {
   return (
     <div
       id="portfolio"
-      className="relative bg-[rgb(243,247,255)] pt-16 -mb-8 overflow-hidden sm:pt-24 lg:pt-32"
+      className="relative bg-[rgb(243,247,255)] pt-4  overflow-hidden sm:pt-24 lg:pt-32"
       style={{
         gridColumn: "span 7",
         gridRowStart: "second",
@@ -46,7 +46,7 @@ export default function Example() {
           {portfolio.map((example) => (
             <div
               key={example.name}
-              className={` flex  flex-col mx-auto h-full -mb-6 w-screen md:w-1/2 `}
+              className={` flex  flex-col mx-auto h-full  w-screen md:w-1/2 `}
             >
               <div
                 className={`${example.name === "Community" ? "text-black" : "text-white"} text-center  w-full md:w-1/2 h-12 absolute z-10 text-5xl font-[340]`}

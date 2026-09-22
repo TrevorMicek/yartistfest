@@ -12,6 +12,7 @@ const Header = (props) => {
     "Google Ads",
     "Social Media",
     "About",
+    "Bands",
     "Blog",
     "Portfolio",
     "Contact",
