@@ -120,7 +120,8 @@ export default function HeroComp() {
                     Welcome To Yartistfest
                   </h1>
                   <p className="mt-3 text-gray-300 sm:mt-5 sm:text-xl .5xl:pt-4 .5xl:-mb-4 .5xl:text-1.5xl xl:text-xl min-w-full ">
-                    Music, Art, and Community. Built by Denver, for Denver.
+                    Music, Art, and Community. <br />
+                    Built by Denver, for Denver.
                   </p>
                   <FadeIn>
                     <div className="mt-10 sm:mt-12">

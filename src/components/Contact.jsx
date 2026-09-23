@@ -1,10 +1,12 @@
+"use client";
 import React, { useState, useRef } from "react";
-import { FadeIn } from "./FadeIn.jsx";
+import { FadeIn } from "./FadeIn";
+import { Switch } from "@headlessui/react";
 import emailjs from "emailjs-com";
 
-import Confirm from "./Confirmation.jsx";
+import Confirm from "./Confirmation";
 
-import UseInput from "../customHooks/useInput.jsx";
+import UseInput from "../customHooks/useInput";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -92,13 +94,19 @@ export default function Example() {
           "service_arikqvn",
           "template_ht51ufi",
           e.target,
-          "user_kC0T8kmC4F1GOkt3Q06Q4"
+          "user_kC0T8kmC4F1GOkt3Q06Q4",
         );
         e.preventDefault();
     }
   };
+  const endForm = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+    setConfirm(false);
+  };
   const confirmMessage = [
-    "Thanks for reaching out to NoCo Web Designs!",
+    "Thanks for reaching out to Yartistfest!",
     "We will respond ASAP",
   ];
 
@@ -181,53 +189,12 @@ export default function Example() {
 
         <div className="text-center">
           <FadeIn>
-            <h2 className="text-3xl font-mont font-[425] text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Questions, Comments, Concerns?
             </h2>
             <p className="mt-4 text-lg leading-6 text-gray-500">
               We will get back to you by the end of the day!
             </p>
-            <p className="mb-3 text-lg leading-6 text-gray-500">
-              or you can schedule a meeting here.
-            </p>
-            {meeting ? (
-              <>
-                <div
-                  className="meetings-iframe-container"
-                  data-src="https://meetings.hubspot.com/trevor-micek?embed=true"
-                ></div>
-                <script
-                  type="text/javascript"
-                  src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
-                ></script>
-              </>
-            ) : (
-              <div
-                class="mx-auto hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-184504116874"
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                  width: "200px",
-                  height: "50.399993896484375px",
-                }}
-                data-hubspot-wrapper-cta-id="184504116874"
-              >
-                <a
-                  href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLJHYvhfSNUnT3PAuFQHKRVJctZhoVQnpQzrn041c50GcKOoSmxgo87zigFjOdnu6z4f8xmQb03205GcQNxJX%2BNZxDWRkUruiZ5eyPWQyXdVVwsbdWR%2FbC25F%2BPwpW%2F0FesvqFnLtSuj3xiTkB8qglK09XPUdE3Cnbp9IJsEFsLjHBsXlgllmfZ4uIPJ&webInteractiveContentId=184504116874&portalId=47413956"
-                  target="_blank"
-                  rel="noopener"
-                  crossorigin="anonymous"
-                >
-                  <img
-                    alt="Schedule Zoom Meeting"
-                    loading="lazy"
-                    src="https://no-cache.hubspot.com/cta/default/47413956/interactive-184504116874.png"
-                    style={{ height: "100%", width: "100%", objectFit: "fill" }}
-                    onerror="this.style.display='none'"
-                  />
-                </a>
-              </div>
-            )}
           </FadeIn>
         </div>
         <div className="mt-12">
@@ -235,9 +202,180 @@ export default function Example() {
             <Confirm
               prompt="false"
               message={confirmMessage}
-              confirm={() => setConfirm(false)}
+              confirm={() => endForm()}
             />
-          ) : null}
+          ) : (
+            <form
+              ref={form}
+              onSubmit={onSubmit}
+              className="sm:grid-cols-2 sm:gap-x-8"
+            >
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Full name
+                </label>{" "}
+                {validateName}
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    autoComplete="given-name"
+                    value={name}
+                    onChange={handleChange}
+                    key="name"
+                    placeholder="Enter name..."
+                    className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="company"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Company
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    autoComplete="organization"
+                    className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Email {validateEmail}
+                </label>
+                <div className="mt-1">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    value={email}
+                    onChange={handleChange}
+                    key="name"
+                    placeholder="Enter email..."
+                    className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
+
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="phone-number"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Phone Number
+                </label>
+                <div className="mt-1 relative rounded-md shadow-sm">
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <label htmlFor="country" className="sr-only">
+                      Country
+                    </label>
+                    <select
+                      id="country"
+                      name="country"
+                      className="h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-gray-500 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
+                    >
+                      <option>US</option>
+                      <option>CA</option>
+                      <option>EU</option>
+                    </select>
+                  </div>
+                  <input
+                    type="text"
+                    name="phone-number"
+                    id="phone-number"
+                    autoComplete="tel"
+                    className="py-3 px-4 mb-6 block w-full pl-20 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    placeholder="+1 (555) 987-6543"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Message
+                </label>{" "}
+                {validateMessage}
+                <div className="mt-1">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    value={message}
+                    onChange={handleChange}
+                    key="name"
+                    placeholder="Enter message..."
+                    className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <Switch
+                      checked={agreed}
+                      onChange={setAgreed}
+                      className={classNames(
+                        agreed ? "bg-indigo-600" : "bg-gray-200",
+                        "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
+                      )}
+                    >
+                      <span className="sr-only">Agree to policies</span>
+                      <span
+                        aria-hidden="true"
+                        className={classNames(
+                          agreed ? "translate-x-5" : "translate-x-0",
+                          "inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200",
+                        )}
+                      />
+                    </Switch>
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-base text-gray-500">
+                      By selecting this, you agree to the{" "}
+                      <a
+                        href="#"
+                        className="font-medium text-gray-700 underline"
+                      >
+                        Privacy Policy
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        href="#"
+                        className="font-medium text-gray-700 underline"
+                      >
+                        Cookie Policy
+                      </a>
+                      .
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <button
+                  type="submit"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Let&apos;s talk
+                </button>
+              </div>
+            </form>
+          )}
         </div>
       </div>
     </div>
