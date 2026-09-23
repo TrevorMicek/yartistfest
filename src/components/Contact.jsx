@@ -27,6 +27,11 @@ export default function Example() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
+  const [check, setCheck] = useState({
+    inquiry: true,
+    band: false,
+    school: false,
+  });
   const [validateName, setValidateName] = useState(undefined);
   const [validateEmail, setValidateEmail] = useState(undefined);
   const [validateMessage, setValidateMessage] = useState(undefined);
@@ -53,6 +58,26 @@ export default function Example() {
         }
         setMessage(e.target.value);
         break;
+    }
+  };
+
+  const checked = (e) => {
+    const { name, checked } = e.target;
+
+    if (!checked) {
+      if (Object.values(check).filter(Boolean).length <= 1) {
+        return;
+      }
+    } else {
+      setCheck({
+        inquiry: false,
+        band: false,
+        school: false,
+      });
+      setCheck((prev) => ({
+        ...prev,
+        [name]: checked,
+      }));
     }
   };
   const validateError = (label, which) => {
@@ -210,6 +235,62 @@ export default function Example() {
               onSubmit={onSubmit}
               className="sm:grid-cols-2 sm:gap-x-8"
             >
+              <div className="mt-1 flex flex-row justify-evenly">
+                <div>
+                  <label
+                    htmlFor="check"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Inquiry
+                  </label>{" "}
+                  <input
+                    type="checkbox"
+                    name="inquiry"
+                    id="check"
+                    checked={check.inquiry}
+                    onChange={checked}
+                    autoComplete="given-name"
+                    key="name"
+                    className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="check"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Band Signup
+                  </label>{" "}
+                  <input
+                    type="checkbox"
+                    name="band"
+                    id="check"
+                    checked={check.band}
+                    onChange={checked}
+                    autoComplete="given-name"
+                    key="name"
+                    className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  />
+                </div>{" "}
+                <div>
+                  <label
+                    htmlFor="check"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    School
+                  </label>{" "}
+                  <input
+                    type="checkbox"
+                    name="school"
+                    id="check"
+                    checked={check.school}
+                    onChange={checked}
+                    autoComplete="given-name"
+                    key="name"
+                    className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
               <div>
                 <label
                   htmlFor="name"
